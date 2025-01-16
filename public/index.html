@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+    <title>مايا - صديقك البهائي</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body style="font-family: 'Inter',  sans-serif;"
+    class="bg-black text-[#E5E5E5] flex-col z-50   flex lg:p-[0] lg:w-screen    lg:h-screen  h-auto p-5 box-border overflow-hidden">
+
+    <!-- home button -->
+    <div class="flex justify-between">
+        <div class="text-medium pl-[2vw] lg:pl-[5vw] mb-[1vh] md:mb-0 relative  lg:text-3xl text-lg md:mt-[1vw] z-50  ">
+            <i onclick="window.open('https://radiantcenturyproductions.com', '_blank')"
+                class="fa-solid fa-house  cursor-pointer"></i>
+        </div>
+
+    </div>
+
+    <div
+        class="main-container justify-center items-center lg:w-[80vw] lg:m-auto   lg:max-w-[90vw] lg:relative lg:border-box h-auto w-98 lg:h-[87%] lg:flex lg:flex-col lg:justify-center lg:items-center">
+        <div>
+
+
+            <!-- Video elements -->
+            <video loading="lazy"  playsinline class="lg:h-[620px] lg:w-[100%] rounded-[20px] lg:object-cover lg:rounded-t-[20px] lg:rounded-b-none" width="100%" id="welcome-video" muted>
+                <source src="./videos/mayaIntroduction.mp4" type="video/mp4">
+            </video>
+            
+            <video loading="lazy" id="tts-video" playsinline autoplay class="hidden lg:h-[620px] lg:w-[100%] rounded-[20px] lg:object-cover lg:rounded-t-[20px] lg:rounded-b-none" height="85%" width="100%" loop muted>
+                <source src="./videos/longVideo.mp4" type="video/mp4">
+            </video>
+            
+            <video loading="lazy" id="is-other-question-video" playsinline autoplay muted class="hidden lg:h-[620px] lg:w-[100%] rounded-[20px] lg:object-cover lg:rounded-t-[20px] lg:rounded-b-none" height="85%" width="100%">
+                <source src="./videos/maya1.mp4" type="video/mp4">
+            </video>
+            
+            <video loading="lazy" id="want-to-be-bahai" playsinline autoplay muted class="hidden lg:h-[620px] lg:w-[100%] rounded-[20px] lg:object-cover lg:rounded-t-[20px] lg:rounded-b-none" height="85%" width="100%">
+                <source src="./videos/wantToBe.mp4" type="video/mp4">
+            </video>
+            
+            <video loading="lazy" id="thankYouBahaiVideo" playsinline autoplay muted class="hidden lg:h-[620px] lg:w-[100%] rounded-[20px] lg:object-cover lg:rounded-t-[20px] lg:rounded-b-none" height="85%" width="100%">
+                <source src="./videos/thankyou.mp4" type="video/mp4">
+            </video>
+
+            <!-- Dialogs -->
+            <div class="   flex justify-center">
+                <div id="dialog"
+                    class="hidden md:fixed lg:w-[300px] lg:h-[180px] flex flex-row lg:top-[45%] lg:left-[48%] lg:justify-center lg:items-center  transform lg:translate-x-[-50%] lg:translate-y-[-50%] w-[220px] h-[50px] absolute bottom-[17vh] md:ml-[55px] md:mt-[50px]  flex items-center  justify-center z-30  cursor-pointer">
+                    <p
+                        class="lg:w-[300px] hover:bg-[#3960aeda] transition-all  lg:h-[120px] leading-[1.5] lg:leading-[1]  lg:text-[25px] text-sm font-[500]  text-center lg:bg-[#00000080] bg-[#222020] p-[2vw] rounded-[10px]">
+                        يرجى النقر هنا إذا لم يكن لديك المزيد من الأسئلة</p>
+                </div>
+                <div id="welcome-dialog"
+                    class="fixed lg:w-[300px] lg:h-[180px] flex flex-row lg:justify-center lg:items-center lg:top-[45%] lg:left-[50%]  transform lg:translate-x-[-50%] lg:translate-y-[-50%] w-[220px] h-[50px]  mt-[80px] flex items-center  justify-center z-20 cursor-pointer">
+                    <p class=" lg:w-[280px] lg:h-[120px] leading-[1.5] hover:bg-[#3960aeda] transition-all
+                    lg:leading-[1] lg:text-[25px] text-sm font-[500] lg:text-center text-center lg:bg-[#00000080]
+                    bg-[#222020] p-[15px] rounded-[10px]">
+                    انقر هنا لبدء التفاعل مع مايا</p>
+                </div>
+                <div id="want-to-be-bahai-dailog"
+                    class=" hidden md:fixed lg:w-[300px] h-[120px]  lg:h-[150px] flex flex-col lg:bg-[#00000080]  bg-[#222020] lg:justify-center lg:items-center lg:top-[45%] lg:left-[48%] transform lg:translate-x-[-50%] lg:translate-y-[-50%] w-[220px]  md:ml-[55px] md:mt-[50px] absolute bottom-[20vh] flex rounded-[20px] items-center justify-center z-40 cursor-pointer">
+                    <p
+                        class="lg:w-[280px]  lg:h-[80px]  leading-[1.5] lg:leading-[1]  lg:text-[25px] text-sm font-[500]  text-center  p-[15px] rounded-[10px]">
+                        هل ترغب في أن تصبح بهائيًا؟</p>
+                    <div class="flex justify-center space-x-2">
+                        <button class="px-6 py-2 bg-blue-600 text-white rounded-md font-semibold"
+                            id="bahaiYes">نعم</button>
+                        <button class="px-6 py-2 bg-red-600 text-white rounded-md font-semibold"
+                            id="bahaiNo">لا</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fixed bottom container -->
+            <div id="bottom-container"
+                class="fixed lg:h-[80px] lg:w-[100%] lg:border-box lg:flex lg:flex-row lg:m-auto   lg:relative  bottom-0 left-0   lg:justify-start lg:items-center w-full bg-[#1A1A1A] lg:rounded-b-[20px] lg:rounded-t-none rounded-t-[20px] lg:p-0 p-3 opacity-70">
+                <!-- First row: Mic button and Input field -->
+                <div class="flex  flex-col space-y-3">
+                    <!-- Mic button and Input field -->
+                    <div class="flex items-center justify-around space-x-1 lg:space-x-6">
+
+                        <!-- faq button -->
+                        <button id="faq-toggle-btn"
+                            class=" border lg:text-lg md:text-medium text-sm  cursor-pointer bg-[#b48811] p-2 rounded-lg w-fit py-2 ">
+                            <h3 class="font-bold">قائمة الأسئلة </h3>
+                            <p>غالبًا ما يُسأل عن البهائيين</p>
+
+                        </button>
+                        <!-- <button id="faq-toggle-btn-2" class=" w-[45px]  block md:hidden  ">
+                            <img src="/static/faq.png" alt="faq">
+
+                        </button> -->
+                        <!-- <i class="fa-solid fa-arrow-right text-3xl hidden md:block"></i> -->
+                        <img src="right-arrow.png" alt="arrow" class="w-28 rotate-180  hidden md:block">
+                        <div class="lg:text-xl md:text-medium hidden md:block ">الرجاء اختيار أي سؤال من قائمة الأسئلة هنا
+                        </div>
+
+
+
+
+
+                        <!-- <div class="lg:w-[50px] lg:h-[50px] w-[30px] h-[30px] flex justify-center items-center">
+                            <button
+                                class="w-full h-full lg:text-[30px] text-[18px] border-[#E5E5E5] border-[1px] transition-colors duration-300 ease-in-out text-white bg-[#222020] rounded-full flex items-center justify-center"
+                                id="mic-record-btn" onclick="toggleRecording()">
+                                <i class="fas fa-microphone mic-icon"></i>
+                            </button>
+                        </div>
+
+                     
+                        <div id="input-container" class="flex-grow lg:flex-grow-0">
+                            <div
+                                class="lg:h-[50px]   h-[40px] rounded-[10px] lg:w-[600px] bg-white flex items-center justify-center">
+                                <input
+                                    class="lg:w-[90%] lg:ml-[20px] w-full lg:h-full p-2 text-black lg:text-[20px] lg:w-full text-[11px] rounded-[10px] outline-none font-medium placeholder-black"
+                                    id="user-input" type="text" placeholder="Ask me anything about the Bahai Faith..."
+                                    autocomplete="off" autocapitalize="on">
+                            </div>
+                        </div> -->
+
+                        <button id="sendMessagebtn"
+                            class="px-2 py-1 lg:h-[45px] hidden lg:px-5 lg:py-0 lg:text-[20px] lg:uppercase bg-blue-600 text-white rounded-[10px]"
+                            onclick="sendMessage()">إرسال</button>
+                        <button id="stopMessagebtn"
+                            class="  px-4 py-2 text-xl lg:h-[45px] lg:px-5 lg:py-0 lg:text-[20px] lg:uppercase bg-red-600 text-white rounded-[10px]">إيقاف</button>
+                        <!-- <label class="hidden lg:block flex items-center text-white lg:text-[20px] lg:flex ">
+              <input type="checkbox" id="use-tts" checked class="lg:w-[40px] lg:h-[38px]   mr-2">
+              <p>Use TTS</p>
+            </label> -->
+                    </div>
+
+
+                </div>
+                <div class="w-full flex flex-row md:justify-around  justify-between  mt-2   lg:hidden">
+                    <label class="flex hidden  items-center text-white text-[10px] text-center">
+                        <input type="checkbox" id="use-tts" checked class="mr-2 "> <span>استخدام تقنية تحويل النص إلى كلام</span>
+                    </label>
+                    <!-- <p class="lg:hidden   text-[white] font-[600] pr-[10px] pl-[10px] text-[10px] text-center cursor-pointer underline"
+            onclick="window.location.href='https://radiantcenturyproductions.com'">
+            www.radiantcenturyproductions.com
+          </p> -->
+                    <div class="lg:hidden   text-[white] hover:text-blue-500 transition-all font-[500] pr-[1px] pl-[1px] text-[8px] text-center cursor-pointer "
+                        onclick="window.location.href='https://radiantcenturyproductions.com/become-a-bahai/'">
+                        كيفية <p class="py-0">كيف تصبح بهائيًا</p>
+                    </div>
+                    <div class="lg:hidden   text-[white] font-[600] pr-[1px] pl-[1px] text-[10px] text-center ">
+
+                        <p>لأسئلة إضافية</p>
+                        <p onclick="window.location.href='https://radiantcenturyproductions.com'"
+                            class="py-0 inline hover:text-blue-400 cursor-pointer transition-all underline ">
+                            www.RadiantCenturyProductions.com</p>
+                        <p onclick="window.location.href='https://www.bahai.org/'"
+                            class="py-0 inline hover:text-blue-400 cursor-pointer transition-all underline ">
+                            www.Bahai.org</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- <div
+        class="fixed bg-[#e39241] lg:w-[200px] lg:h-[60px] text-[black] text-center justify-center flex flex-col transform absolute lg:translate-x-[125%] lg:translate-y-[-50%] left-[20px] bottom-[110px]  cursor-pointer"
+        onclick="window.location.href='https://radiantcenturyproductions.com/list-of-questions/'">
+        <p class="uppercase font-[600]">list of questions</p>
+        <p class="font-[500]">Often Asked of Bahai's </p>
+      </div> -->
+        </div>
+        <div
+            class="hidden lg:flex flex-row md:gap-14  justify-around lg:w-[70vw] lg:border-box   lg:max-w-[50vw] gap-7">
+            <div class="text-[#efe7e7] font-[600] hover:text-blue-400 transition-all text-xs mt-14 md:mt-3 md:mb-5  pr-[10px] pl-[10px] text-[10px] text-center cursor-pointer lg:text-[18px] lg:pt-[5px] "
+                onclick="window.location.href='https://radiantcenturyproductions.com/become-a-bahai/'">
+                كيفية <p class="py-1">كيف تصبح بهائيًا</p>
+            </div>
+            <div
+                class="text-[#efe7e7] font-[600] text-xs mt-14 md:mt-3 md:mb-5   pr-[10px] pl-[10px] text-[10px] text-center  lg:text-[18px] lg:pt-[5px] ">
+
+                <p class="md:mb-2">لأسئلة إضافية</p>
+                <p onclick=" window.location.href='https://radiantcenturyproductions.com'"
+                    class=" py-1 md:pr-3 inline hover:text-blue-400 cursor-pointer transition-all underline ">
+                    www.RadiantCenturyProductions.com</p>
+                <p onclick=" window.location.href='https://www.bahai.org/'"
+                    class=" py-1 md:pl-3 inline hover:text-blue-400 cursor-pointer transition-all underline ">
+                    www.Bahai.org</p>
+            </div>
+
+        </div>
+
+        <!-- faq container  -->
+
+        <div id="faq-container"
+            class="hidden lg:left-[2vw]  fixed bottom-28 w-[90vw]  z-50 text-white md:bottom-40  bg-yellow-100 shadow-lg rounded-lg lg:w-[20vw] lg:h-[67vh] h-[60vh] md:h-[50vh] overflow-y-auto p-4 pt-0">
+            <div
+                class="font-bold p-2 text-black fixed flex flex-col justify-center items-center bg-yellow-100 z-50 inline w-[84vw] lg:w-[18vw] mt-0 h-fit ">
+                قائمة الأسئلة
+
+                <P class="text-medium text-gray-600">غالبًا ما يُسأل البهائيين</P>
+            </div>
+
+
+            <div id="faq-types" class="space-y-3 mt-[9vh] z-40  md:mt-[8vh]">
+                <!-- Each type section will be injected here -->
+            </div>
+
+
+        </div>
+
+        <!-- Chat container -->
+        <div class="chat-container" id="chat-container">
+            <div class="chat-log hidden" id="chat-log"></div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="module" src="script.js" defer></script>
+
+
+</body>
+
+</html>
