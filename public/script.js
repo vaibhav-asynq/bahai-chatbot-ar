@@ -557,7 +557,7 @@ function handleBahaiNoClick() {
   thankYouBahai.classList.remove("hidden");
   const promptElem = document.createElement("p");
   promptElem.className = "bot";
-  promptElem.textContent = "Thank you for your interest in Baha'i faith";
+  promptElem.textContent = "شكرًا لاهتمامك بديانة البهائية";
   chatLog.scrollTop = chatLog.scrollHeight;
   chatLog.appendChild(promptElem);
   thankYouBahai.muted = false;
